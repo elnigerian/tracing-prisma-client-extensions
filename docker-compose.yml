@@ -1,5 +1,9 @@
-version: "3"
+version: "3.8"
 services:
+  prisma-pg-db:
+    image: postgres
+    container_name: prisma-pg-db
+
   tracing:
     image: jaegertracing/all-in-one:1.35
     environment:

@@ -8,11 +8,12 @@ For reference express server used at the _beginning of the tutorial_ go to the [
 
 ### Installation
 
-1. Clone this branch: `git clone git@github.com:TasinIshmam/tracing-tutorial-prisma.git`.
-2. Navigate to the cloned directory: `cd tracing-tutorial-prisma`.
-3. Install dependencies: `npm install`.
+1. Clone this branch: `git clone git@github.com:elnigerian/tracing-prisma-client-extensions.git`.
+2. Navigate to the cloned directory: `cd tracing-prisma-client-extensions`.
+3. Install dependencies: `yarn install`.
 4. Run migrations: `npx prisma migrate dev`.
 5. Start jaeger: `docker-compose up -d`
-6. Start the server: `npm run dev`.
+6. Start the server: `yaarn dev`.
 7. Test out the example endpoint: [http://localhost:4000/users/random](http://localhost:4000/users/random).
-8. See the generated traces in Jaeger: [http://localhost:16686](http://localhost:16686). 
+8. See the generated traces in Jaeger: [http://localhost:16686](http://localhost:16686).
+9. Test out the example by creating a user using curl - `curl -X POST -H "Content-Type: application/json" -d '{"userId": "user-26"}' http://localhost:4000/user/create`

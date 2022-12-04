@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  prisma-pg-db:
+    hostname: localhost
+    ports:
+      - '4321:5432'
+    environment:
+      - POSTGRES_DB=prisma_db
+      - POSTGRES_USER=prisma
+      - POSTGRES_PASSWORD_FILE=/run/secrets/db-password
+    secrets:
+      - db-password
+
+secrets:
+  db-password:
+    file: ./dev_password

@@ -6,3 +6,6 @@ prisma/dev.db
 .code 
 
 .DS_Store
+
+
+dev_password

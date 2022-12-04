@@ -1,14 +1,14 @@
-import { Resource } from "@opentelemetry/resources";
-import { SemanticResourceAttributes } from "@opentelemetry/semantic-conventions";
-import { SimpleSpanProcessor, BatchSpanProcessor } from "@opentelemetry/sdk-trace-base";
-import { NodeTracerProvider } from "@opentelemetry/sdk-trace-node";
-import { trace, Tracer } from "@opentelemetry/api";
-import { JaegerExporter } from "@opentelemetry/exporter-jaeger";
-import { registerInstrumentations } from "@opentelemetry/instrumentation";
+import { Resource } from '@opentelemetry/resources';
+import { SemanticResourceAttributes } from '@opentelemetry/semantic-conventions';
+import { SimpleSpanProcessor, BatchSpanProcessor } from '@opentelemetry/sdk-trace-base';
+import { NodeTracerProvider } from '@opentelemetry/sdk-trace-node';
+import { trace, Tracer } from '@opentelemetry/api';
+import { JaegerExporter } from '@opentelemetry/exporter-jaeger';
+import { registerInstrumentations } from '@opentelemetry/instrumentation';
 import { PrismaInstrumentation } from '@prisma/instrumentation';
-import { ExpressInstrumentation } from '@opentelemetry/instrumentation-express'
-import { HttpInstrumentation } from '@opentelemetry/instrumentation-http'
-import { TraceIdRatioBasedSampler } from '@opentelemetry/sdk-trace-base'
+import { ExpressInstrumentation } from '@opentelemetry/instrumentation-express';
+import { HttpInstrumentation } from '@opentelemetry/instrumentation-http';
+import { TraceIdRatioBasedSampler } from '@opentelemetry/sdk-trace-base';
 
 export default function initializeTracing(serviceName: string): Tracer {
 
