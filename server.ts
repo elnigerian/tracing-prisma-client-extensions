@@ -64,7 +64,6 @@ const prisma = new PrismaClient({});
 //     });
 // });
 
-
 // Manually trace Prisma Queries
 // app.get("/users/random", async (_req: Request, res: Response) => {
 //     await tracer.startActiveSpan("GET /users/random", async (requestSpan) => {
